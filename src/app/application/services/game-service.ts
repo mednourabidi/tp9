@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { Game } from '../models/game';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
+
 
 const URL = environment.apiUrL;
 
