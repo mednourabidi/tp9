@@ -14,7 +14,7 @@ export class GameService {
 
   getGames(): Observable<Game[]> {
     return this._http.get<Game[]>(URL).pipe(
-      tap(list => this._games.set(list))
+      tap(jeux => this._games.set(jeux))
     );
   }
 

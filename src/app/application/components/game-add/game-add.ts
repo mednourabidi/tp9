@@ -27,8 +27,6 @@ export class GameAdd implements OnInit {
     isNew: true,
     shops: [],
   });
-
-  
   readonly gameForm = form(this.gameModel, path => {
     required(path.name, { message: 'Nom obligatoire' });
     pattern(path.name, /^[A-Z].+$/, { message: 'Le nom doit commencer par une majuscule' });
@@ -67,10 +65,9 @@ export class GameAdd implements OnInit {
     this.gameModel.update(game => ({ ...game, shops: [...game.shops, ''] }));
   }
 
-  onRemoveShop(index: number) {
-    this.gameModel.update(game => ({
-      ...game,
-      shops: game.shops.filter((_, i) => i !== index),
-    }));
-  }
+onRemoveShop(index: number) {
+  const game = this.gameModel();
+  game.shops.splice(index, 1);       
+  this.gameModel.set({ ...game });    
+}
 }
