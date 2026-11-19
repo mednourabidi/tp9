@@ -22,6 +22,15 @@
         "jandouba"
       ],
       "id": "V_nEK7EOfaI"
+    },
+    {
+      "name": "Sd",
+      "price": 45,
+      "madeIn": "Tunisie",
+      "category": "Puzzle",
+      "isNew": true,
+      "shops": [],
+      "id": "fO4Jzb7q_KM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
